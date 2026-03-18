@@ -38,11 +38,30 @@ export default function Header() {
             </div>
 
             {/* The Brand Name */}
-            <div className="flex flex-col gap-0.5">
-              <span className="text-white font-bold text-xl tracking-tighter uppercase leading-none letter-spacing-xl">
-                Fusion AI
-              </span>
-              <span className="text-zinc-500 text-[9px] font-mono uppercase tracking-[0.2em] leading-none opacity-60">
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center gap-1.5">
+                {/* FUSION - Pure White */}
+                <span className="text-white font-bold text-xl tracking-tighter uppercase leading-none">
+                  Fusion
+                </span>
+
+                {/* AI - Gemini Gradient */}
+                <span
+                  className="font-black text-xl tracking-tighter uppercase leading-none"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #4e8cff 0%, #8033ff 50%, #f87171 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  AI
+                </span>
+              </div>
+
+              {/* Subtitle */}
+              <span className="text-zinc-500 text-[9px] font-mono uppercase tracking-[0.3em] leading-none opacity-60">
                 Neural Systems
               </span>
             </div>
