@@ -1,3 +1,5 @@
+"use client";
+import Link from "next/link";
 
 const tiers = [
   {
@@ -55,7 +57,7 @@ const tiers = [
   },
 ];
 
-export default function Pricing() {
+export default function PricingPage() {
   return (
     <main className="bg-[#09090b] min-h-screen pt-32 pb-24 px-6">
       <div className="max-w-7xl mx-auto">

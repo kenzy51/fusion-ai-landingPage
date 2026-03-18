@@ -21,19 +21,19 @@ export function Footer() {
             <h4 className="text-white font-bold">Solutions</h4>
             <ul className="text-zinc-500 space-y-2 text-sm">
               <li>
-                <Link href="/services/voice" className="hover:text-[#d4ff33]">
-                  AI Voice Agents
-                </Link>
+                {/* <Link href="/services/voice" className="hover:text-[#d4ff33]"> */}
+                AI Voice Agents
+                {/* </Link> */}
               </li>
               <li>
-                <Link href="/services/content" className="hover:text-[#d4ff33]">
-                  Cinematic Production
-                </Link>
+                {/* <Link href="/services/content" className="hover:text-[#d4ff33]"> */}
+                Cinematic Production
+                {/* </Link> */}
               </li>
               <li>
-                <Link href="/services/seo" className="hover:text-[#d4ff33]">
-                  Practice SEO
-                </Link>
+                {/* <Link href="/services/seo" className="hover:text-[#d4ff33]"> */}
+                Practice SEO
+                {/* </Link> */}
               </li>
             </ul>
           </div>
@@ -62,16 +62,16 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-white font-bold">NYC Office</h4>
             <p className="text-zinc-500 text-sm">
-              Manhattan, New York <br />
+              11232, New York <br />
               929-769-6545 <br />
-              hello@fusionai.agency
+              hello@fusionaiagency.com{" "}
             </p>
           </div>
         </div>
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:row justify-between items-center gap-4">
           <p className="text-zinc-600 text-xs">
-            © 2026 Fusion Web Works LLC. All rights reserved. Made in NYC.
+            © 2026 Fusion Works LLC. All rights reserved. Made in NYC.
           </p>
           <div className="flex gap-6 text-zinc-600 text-xs">
             <span>HIPAA Compliant Infrastructure</span>
