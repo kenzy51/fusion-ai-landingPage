@@ -8,9 +8,9 @@ export default function Header() {
   // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
   }, [isOpen]);
 
@@ -26,17 +26,34 @@ export default function Header() {
       <nav className="fixed top-0 w-full z-[100] bg-[#09090b]/80 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 h-20 flex items-center justify-between">
           {/* Logo - Stays above everything */}
-          <Link href="/" className="flex items-center gap-2 relative z-[110]">
-            <div className="w-8 h-8 bg-[#d4ff33] rounded-lg" />
-            <span className="text-white font-bold text-xl tracking-tighter uppercase">Fusion AI</span>
+          <Link
+            href="/"
+            className="flex items-center gap-3 relative z-[110] group"
+          >
+            {/* The Refined Icon */}
+            <div className="w-9 h-9 bg-[#d4ff33] rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(212,255,51,0.2)] group-hover:shadow-[0_0_25px_rgba(212,255,51,0.4)] transition-all duration-300">
+              <span className="text-black font-extrabold text-2xl font-mono leading-none -mt-0.5">
+                F
+              </span>
+            </div>
+
+            {/* The Brand Name */}
+            <div className="flex flex-col gap-0.5">
+              <span className="text-white font-bold text-xl tracking-tighter uppercase leading-none letter-spacing-xl">
+                Fusion AI
+              </span>
+              <span className="text-zinc-500 text-[9px] font-mono uppercase tracking-[0.2em] leading-none opacity-60">
+                Neural Systems
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-10">
             {links.map((link) => (
-              <Link 
+              <Link
                 key={link.name}
-                href={link.href} 
+                href={link.href}
                 className="text-zinc-400 hover:text-[#d4ff33] text-sm font-medium transition-colors"
               >
                 {link.name}
@@ -48,32 +65,38 @@ export default function Header() {
           </div>
 
           {/* Burger Button - Stays above everything */}
-          <button 
+          <button
             className="md:hidden relative z-[110] w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
           >
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? "opacity-0" : ""}`} />
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+            <span
+              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`}
+            />
+            <span
+              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            />
           </button>
         </div>
       </nav>
 
       {/* Mobile Menu Overlay - Moved OUTSIDE <nav> to prevent parent z-index issues */}
-      <div 
+      <div
         className={`fixed inset-0 bg-[#09090b] z-[90] flex flex-col items-center justify-center gap-8 transition-all duration-500 ease-in-out ${
-          isOpen 
-          ? "opacity-100 translate-y-0" 
-          : "opacity-0 -translate-y-full pointer-events-none"
+          isOpen
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-full pointer-events-none"
         }`}
       >
         <div className="flex flex-col items-center gap-8">
           {links.map((link) => (
-            <Link 
+            <Link
               key={link.name}
-              href={link.href} 
-              onClick={() => setIsOpen(false)} 
+              href={link.href}
+              onClick={() => setIsOpen(false)}
               className="text-4xl font-bold text-white hover:text-[#d4ff33] transition-colors"
             >
               {link.name}
@@ -83,7 +106,7 @@ export default function Header() {
             Get Started
           </button>
         </div>
-        
+
         <div className="absolute bottom-12 text-zinc-600 font-mono text-xs uppercase tracking-[0.3em]">
           Fusion Web Works LLC • NYC
         </div>
