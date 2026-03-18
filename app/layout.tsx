@@ -17,8 +17,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Fusion AI",
   description: "Fusion AI - your choice in AI development",
+  icons: {
+    icon: "/favicon.svg", 
+  },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
