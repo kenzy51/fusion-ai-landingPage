@@ -24,7 +24,9 @@ export default function ContactPage() {
           <div className="space-y-6 pt-8 border-t border-white/5">
             <div>
               <h4 className="text-white font-bold mb-1">Direct Access</h4>
-              <p className="text-zinc-500">hello@fusionai.agency</p>
+              <a href="mailto:hello@fusionaiagency.com">
+                <p className="text-zinc-500">hello@fusionaiagency.com</p>
+              </a>
               <p className="text-zinc-500">929-769-6545</p>
             </div>
             <div>
