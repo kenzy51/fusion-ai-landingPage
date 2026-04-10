@@ -1,10 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const pathname = usePathname()
+  if (pathname.startsWith('/studio')){
+    return null 
+  }
   // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (isOpen) {
@@ -16,7 +20,7 @@ export default function Header() {
 
   const links = [
     { name: "Services", href: "/services" },
-    // { name: "Industries", href: "/industries" },
+    { name: "Blog", href: "/blog" },
     { name: "Pricing", href: "/pricing" },
     { name: "Contact", href: "/contact" },
   ];
