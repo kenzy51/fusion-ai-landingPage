@@ -12,6 +12,8 @@ export default function ContactPage() {
     const formData = new FormData(e.currentTarget);
     const data = {
       fullName: formData.get("fullName"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
       practiceName: formData.get("practiceName"),
       interest: formData.get("interest"),
       leads: formData.get("leads"),
