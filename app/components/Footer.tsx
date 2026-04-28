@@ -42,9 +42,9 @@ export function Footer() {
             <h4 className="text-white font-bold">Company</h4>
             <ul className="text-zinc-500 space-y-2 text-sm">
               <li>
-                <Link href="/terms" className="hover:text-[#d4ff33]">
+                {/* <Link href="/terms" className="hover:text-[#d4ff33]">
                   Terms of Service
-                </Link>
+                </Link> */}
               </li>
               <li>
                 <Link href="/privacy" className="hover:text-[#d4ff33]">
