@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { MetadataRoute } from 'next'
 import { client } from "@/sanity/lib/client"
 import { groq } from "next-sanity"
@@ -44,7 +45,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       "updatedAt": _updatedAt
     }`
   )
-
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const dynamicRoutes: MetadataRoute.Sitemap = posts.map((post: any) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt || new Date()),

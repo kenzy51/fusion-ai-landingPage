@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@sanity/vision": "^5.20.0",
+    "@sendgrid/mail": "^8.1.6",
     "next": "16.1.6",
     "next-sanity": "^12.2.2",
     "nextjs-toploader": "^3.9.17",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "resend": "^6.12.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
