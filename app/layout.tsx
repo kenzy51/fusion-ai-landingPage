@@ -16,19 +16,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.fusionaiagency.com"), // REPLACE with your real domain
+  metadataBase: new URL("https://www.fusionaiagency.com"), 
   title: {
-    default: "Fusion AI | High-Performance AI Voice Solutions",
+    default: "Fusion AI | NYC Neural Infrastructure & Content Production",
     template: "%s | Fusion AI",
   },
   description:
-    "Scale your clinic with Fusion AI. We build interruptible, low-latency AI voice agents for medical practices and high-growth businesses.",
+    "Bespoke AI voice agents and cinematic content for NYC's elite businesses. We combine local high-end production with autonomous neural systems.",
   keywords: [
-    "AI Voice Agent",
-    "Dental AI",
-    "Fusion AI Agency",
-    "Automated Patient Booking",
-    "Full-Stack AI Development",
+    "NYC AI Agency",
+    "Neural Voice Agents",
+    "High-End Content Production NYC",
+    "AI Business Automation",
+    "Dental & Medical AI NYC",
+    "Bespoke AI Solutions New York",
   ],
   authors: [{ name: "Kanat Nazarov" }],
   openGraph: {
