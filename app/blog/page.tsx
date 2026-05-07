@@ -28,7 +28,6 @@ export default async function BlogIndex() {
     <main className="min-h-screen bg-[#09090b] pt-32 pb-24 px-6 selection:bg-[#d4ff33] selection:text-black">
       <div className="max-w-7xl mx-auto">
         
-        {/* Header Section */}
         <div className="max-w-3xl mb-16 md:mb-24">
           <span className="text-[#d4ff33] font-mono text-xs uppercase tracking-[0.3em] mb-4 block">
             Intelligence Archive
@@ -42,17 +41,15 @@ export default async function BlogIndex() {
           </p>
         </div>
 
-        {/* Featured / Large Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {posts.map((post: any, i: number) => (
             <Link 
               key={post.slug} 
               href={`/blog/${post.slug}`}
               className={`group relative flex flex-col rounded-[2.5rem] bg-white/[0.02] border border-white/10 overflow-hidden transition-all duration-500 hover:border-[#d4ff33]/40 hover:bg-white/[0.04] ${
-                i === 0 ? "md:col-span-2 lg:col-span-2" : "" // First post is larger
+                i === 0 ? "md:col-span-2 lg:col-span-2" : "" 
               }`}
             >
-              {/* Image Container */}
               <div className={`relative w-full overflow-hidden ${
                 i === 0 ? "aspect-[16/9] md:aspect-[21/9]" : "aspect-video"
               }`}>
@@ -70,7 +67,6 @@ export default async function BlogIndex() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/20 to-transparent opacity-80" />
               </div>
 
-              {/* Content Container */}
               <div className="p-8 md:p-10 flex flex-col flex-grow">
                 <div className="flex items-center gap-4 mb-6">
                   <span className="text-[#d4ff33] font-mono text-[10px] uppercase tracking-widest">
@@ -99,8 +95,6 @@ export default async function BlogIndex() {
             </Link>
           ))}
         </div>
-
-        {/* Footer CTA */}
         <div className="mt-32 text-center border-t border-white/5 pt-20">
           <h3 className="text-white text-2xl font-bold mb-4 tracking-tighter">Stay Synchronized.</h3>
           <p className="text-zinc-500 text-sm mb-8">New intelligence reports are broadcasted bi-weekly.</p>

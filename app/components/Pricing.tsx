@@ -16,6 +16,7 @@ const tiers = [
       "Automated Email Follow-ups",
       "Searchable Call Recordings & Transcripts",
       "Unlimited Concurrent Conversations",
+      "Call Forwarding",
     ],
     cta: "Initialize Neural Core",
     popular: true,
