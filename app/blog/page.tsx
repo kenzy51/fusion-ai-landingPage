@@ -1,9 +1,18 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
 import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
+import { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
-
+export const metadata: Metadata = {
+  title: "Neural Systems Insights",
+  description: "Deep dives into AI voice agents, automation, and the future of dental practice tech.",
+  openGraph: {
+    title: "Neural Systems Insights | Fusion AI Blog",
+    description: "Expert insights on scaling clinics and businesses with high-performance AI.",
+  }
+};
 export default async function BlogIndex() {
   // Fetch all posts from Sanity
   const posts = await client.fetch(groq`*[_type == "post"] | order(publishedAt desc) {

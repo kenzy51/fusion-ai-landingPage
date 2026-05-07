@@ -67,17 +67,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <NextTopLoader
-          color="#d4ff33"
-          initialPosition={0.08}
-          crawlSpeed={200}
-          height={3}
-          crawl={true}
-          showSpinner={false}
-          easing="ease"
-          speed={200}
-          shadow="0 0 10px #C5A059,0 0 5px #C5A059"
-        /> */}
+
         <Header />
         {children}
         <Footer />

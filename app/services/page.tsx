@@ -1,3 +1,33 @@
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Neural Infrastructure & Services",
+  description:
+    "Explore our suite of AI solutions: Neural Voice Identity, Intelligent Scheduling, and Cinematic Content Production engineered for dental growth.",
+  keywords: [
+    "Neural Voice Identity",
+    "AI Medical Scheduling",
+    "ElevenLabs Dental Integration",
+    "Clinical Videography NYC",
+    "Dental Ad Agency NYC",
+    "AI Patient Summarization",
+  ],
+  openGraph: {
+    title: "Neural Infrastructure | Fusion AI Agency",
+    description: "Advanced AI automation for modern practices. Bridge the gap between leads and appointments.",
+    url: "https://www.fusionaiagency.com/services",
+    images: [
+      {
+        url: "/services-og.png", // Recommended: a custom image showing your service grid
+        width: 1200,
+        height: 630,
+        alt: "Fusion AI Service Infrastructure",
+      },
+    ],
+  },
+};
+
 export default function ServicesPage() {
   const services = [
     {

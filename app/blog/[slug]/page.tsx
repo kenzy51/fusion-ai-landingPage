@@ -1,28 +1,42 @@
-import { Metadata } from 'next';
+import { Metadata, ResolvingMetadata } from 'next';
 import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
 import { PortableText } from "@portabletext/react";
 import { notFound } from "next/navigation";
 
-interface Props {
-    params: Promise<{ slug: string }>;
-}
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { slug } = await params;
-    if (!slug) return { title: "Blog Post" };
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = (await params).slug;
 
-    const post = await client.fetch(
-        groq`*[_type == "post" && slug.current == $slug][0]{ title, "desc": pt::text(body[0...1]) }`,
-        { slug }
-    );
+  const post = await client.fetch(
+    groq`*[_type == "post" && slug.current == $slug][0]{
+      title,
+      description,
+      "ogImage": mainImage.asset->url
+    }`,
+    { slug }
+  );
 
-    if (!post) return { title: "Post Not Found" };
+  if (!post) {
+    return { title: "Post Not Found" };
+  }
 
-    return {
-        title: `${post.title} | Fusion AI Agency`,
-        description: post.desc,
-    };
+  return {
+    title: post.title,
+    description: post.description || `Read more about ${post.title} on Fusion AI.`,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      images: post.ogImage ? [post.ogImage] : [],
+      type: "article",
+    },
+  };
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -107,7 +121,7 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="mt-24 p-12 rounded-[2.5rem] bg-gradient-to-b from-white/[0.03] to-transparent border border-white/5 text-center relative overflow-hidden group">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-[#d4ff33]/30 to-transparent" />
                 <h3 className="text-2xl font-bold text-white mb-4">Integrate your own Jessica.</h3>
-                <p className="text-zinc-500 mb-8 max-w-md mx-auto">We build autonomous neural voice agents for NYC's most forward-thinking dental and medical practices.</p>
+                <p className="text-zinc-500 mb-8 max-w-md mx-auto">We build autonomous neural voice agents for NYC&apos;s most forward-thinking dental and medical practices.</p>
                 <button className="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-[#d4ff33] transition-all hover:scale-105">
                     Initialize Consultation
                 </button>
