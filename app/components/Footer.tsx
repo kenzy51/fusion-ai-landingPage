@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import Link from "next/link";
 
 export function Footer() {
@@ -11,71 +12,101 @@ export function Footer() {
                 Fusion AI
               </span>
             </Link>
-            <p className="text-zinc-500 text-sm leading-relaxed">
-              Precision engineering for medical growth. <br />
+            <p className="text-zinc-500 text-sm leading-relaxed font-light">
+              Autonomous workflows and enterprise-grade intelligence platforms.{" "}
+              <br />
               Powered by Fusion Web Works LLC.
             </p>
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-white font-bold">Solutions</h4>
-            <ul className="text-zinc-500 space-y-2 text-sm">
-              <li>
-                {/* <Link href="/services/voice" className="hover:text-[#d4ff33]"> */}
-                AI Voice Agents
-                {/* </Link> */}
+            <h4 className="text-white font-bold text-sm tracking-wider uppercase font-mono text-zinc-400">
+              // Solutions
+            </h4>
+            <ul className="text-zinc-500 space-y-2 text-sm font-light">
+              <li className="flex items-center gap-2">
+                <span className="w-1 h-1 rounded-full bg-cyan-500/40" />
+                Autonomous Voice Nodes (SARA)
               </li>
-              <li>
-                {/* <Link href="/services/content" className="hover:text-[#d4ff33]"> */}
-                Cinematic Production
-                {/* </Link> */}
+              <li className="flex items-center gap-2">
+                <span className="w-1 h-1 rounded-full bg-purple-500/40" />
+                Neural Vector-RAG Interfaces
               </li>
-              <li>
-                {/* <Link href="/services/seo" className="hover:text-[#d4ff33]"> */}
-                Practice SEO
-                {/* </Link> */}
+              <li className="flex items-center gap-2">
+                <span className="w-1 h-1 rounded-full bg-zinc-500/40" />
+                Programmatic SEO Engines
               </li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-white font-bold">Company</h4>
-            <ul className="text-zinc-500 space-y-2 text-sm">
+            <h4 className="text-white font-bold text-sm tracking-wider uppercase font-mono text-zinc-400">
+              // Company
+            </h4>
+            <ul className="text-zinc-500 space-y-2 text-sm font-light">
               <li>
-                {/* <Link href="/terms" className="hover:text-[#d4ff33]">
-                  Terms of Service
-                </Link> */}
-              </li>
-              <li>
-                <Link href="/privacy" className="hover:text-[#d4ff33]">
+                <Link
+                  href="/privacy"
+                  className="hover:text-white transition-colors duration-200"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-[#d4ff33]">
-                  Contact
+                <Link
+                  href="/contact"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  Contact Protocol
                 </Link>
               </li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-white font-bold">NYC Office</h4>
-            <p className="text-zinc-500 text-sm">
-              11232, New York <br />
+            <h4 className="text-white font-bold text-sm tracking-wider uppercase font-mono text-zinc-400">
+              // NYC Operations
+            </h4>
+            <p className="text-zinc-500 text-sm font-light leading-relaxed">
               929-769-6545 <br />
-              hello@fusionaiagency.com{" "}
+              <a
+                href="mailto:hello@fusionaiagency.com"
+                className="hover:text-white transition-colors duration-200"
+              >
+                hello@fusionaiagency.com
+              </a>
             </p>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:row justify-between items-center gap-4">
-          <p className="text-zinc-600 text-xs">
-            © 2026 Fusion Works LLC. All rights reserved. Made in NYC.
-          </p>
-          <div className="flex gap-6 text-zinc-600 text-xs">
-            <span>HIPAA Compliant Infrastructure</span>
-            <span>AES-256 Encryption</span>
+        {/* BOTTOM METRIC ROW — Fixed layout bug from md:row to md:flex-row */}
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-2 text-zinc-600 text-xs font-light text-center sm:text-left">
+            <span>© 2026 Fusion Works LLC. All rights reserved.</span>
+            <span className="hidden sm:inline text-zinc-800">|</span>
+            {/* THE BACKLINK: High-value anchor text linking to your main root */}
+            <span className="text-zinc-500">
+              Architected by{" "}
+              <a
+                href="https://www.kanatnazarov.com/developer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-400 hover:text-cyan-400 font-medium transition-colors duration-200 underline decoration-zinc-800 underline-offset-4 hover:decoration-cyan-500/40"
+              >
+                Kanat Nazarov
+              </a>
+            </span>
+          </div>
+
+          <div className="flex gap-6 text-[10px] font-mono tracking-wider text-zinc-600 uppercase">
+            <span className="flex items-center gap-1.5">
+              <span className="w-1 h-1 rounded-full bg-emerald-500/50" /> HIPAA
+              Compliant
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1 h-1 rounded-full bg-emerald-500/50" />{" "}
+              AES-256 Protected
+            </span>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";

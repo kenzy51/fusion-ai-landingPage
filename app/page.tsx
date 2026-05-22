@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { AISapience } from "./components/AiSapience";
+import { CaseStudy } from "./components/CaseStudy";
 import { Comparison } from "./components/Comparison";
 import { FeaturesGrid } from "./components/FeaturesGrid";
 import Hero from "./components/Hero";
@@ -15,6 +16,7 @@ export default function Home() {
       <Comparison />
       <LiveProcess />
       <VoiceLab />
+      <CaseStudy />
       <Pricing />
       <AISapience />
       {/* <CreativeEdge /> */}
