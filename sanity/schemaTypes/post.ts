@@ -41,6 +41,24 @@ export const post = defineType({
       type: 'datetime',
       title: 'Published at',
     }),
+    
+    // AUTHOR CONTEXT BLOCK — Pre-loaded with your expert credentials
+    defineField({
+      name: 'author',
+      title: 'Author Details',
+      type: 'object',
+      fields: [
+        { name: 'name', type: 'string', title: 'Author Name' },
+        { name: 'role', type: 'string', title: 'Professional Title' },
+        { name: 'bio', type: 'text', title: 'Author Bio Summary' },
+      ],
+      initialValue: {
+        name: 'Kanat Nazarov',
+        role: 'Systems Architect & Founder',
+        bio: 'Systems Architect specializing in engineering high-performance web ecosystems, low-latency AI voice streams, and programmatic schema infrastructure.'
+      }
+    }),
+
     defineField({
       name: 'body',
       type: 'array',
