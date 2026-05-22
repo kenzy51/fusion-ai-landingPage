@@ -57,7 +57,7 @@ export default async function BlogIndex() {
                   <img 
                     src={post.mainImage} 
                     alt={post.title}
-                    className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                    className="object-cover w-full h-full transition-all duration-700 scale-105 group-hover:scale-100"
                   />
                 ) : (
                   <div className="w-full h-full bg-zinc-900 flex items-center justify-center">
