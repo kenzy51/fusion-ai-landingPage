@@ -18,23 +18,25 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.fusionaiagency.com"), 
   title: {
-    default: "Fusion AI | NYC Neural Infrastructure & Content Production",
+    // REPOSITIONED: Focus locked completely on systems architecture and heavy tech
+    default: "Fusion AI | NYC Neural Infrastructure & Autonomous Systems",
     template: "%s | Fusion AI",
   },
   description:
-    "Bespoke AI voice agents and cinematic content for NYC's elite businesses. We combine local high-end production with autonomous neural systems.",
+    "Bespoke low-latency AI voice nodes and enterprise-grade RAG pipelines for high-performance operations. We engineer autonomous communication networks.",
   keywords: [
-    "NYC AI Agency",
-    "Neural Voice Agents",
-    "High-End Content Production NYC",
-    "AI Business Automation",
-    "Dental & Medical AI NYC",
-    "Bespoke AI Solutions New York",
+    "NYC AI Systems Architect",
+    "Neural Voice Nodes",
+    "Autonomous Business Infrastructure",
+    "Retrieval-Augmented Generation RAG",
+    "Enterprise AI Automation New York",
+    "Medical & Logistics AI Integration",
+    "Bespoke Intelligent Agent Networks"
   ],
   authors: [{ name: "Kanat Nazarov" }],
   openGraph: {
-    title: "Fusion AI | Next-Gen AI Voice Agency",
-    description: "Interruptible, human-like AI voice agents for your business.",
+    title: "Fusion AI | Enterprise Neural Architecture",
+    description: "Low-latency autonomous voice agents and deep RAG knowledge networks.",
     url: "https://www.fusionaiagency.com",
     siteName: "Fusion AI",
     images: [
