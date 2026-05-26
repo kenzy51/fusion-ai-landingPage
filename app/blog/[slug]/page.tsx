@@ -12,7 +12,6 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-// 1. DYNAMIC CYBER GRAPH METADATA ENGINE (For ChatGPT, Perplexity, & SGE Scrapers)
 export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
@@ -195,7 +194,7 @@ export default async function BlogPostPage({ params }: Props) {
             {post.title}
           </h1>
           
-          <p className="text-lg sm:text-xl text-zinc-400 mb-16 leading-relaxed max-w-2xl font-light">
+          <p className="text-lg sm:text-xl text-zinc-400 mb-16 leading-relaxed max-w-4xl font-light">
             {post.description}
           </p>
 
@@ -211,7 +210,7 @@ export default async function BlogPostPage({ params }: Props) {
           )}
 
           {/* Core Structured Content Field Block */}
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="prose prose-invert max-w-none">
               <PortableText value={post.body} components={components} />
             </div>
