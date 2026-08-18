@@ -15,7 +15,7 @@ export function Footer() {
             <p className="text-zinc-500 text-sm leading-relaxed font-light">
               Autonomous workflows and enterprise-grade intelligence platforms.{" "}
               <br />
-              Powered by Fusion Web Works LLC.
+              Powered by Fusion Works LLC.
             </p>
           </div>
 
